@@ -1,0 +1,14 @@
+Colores:
+#20A2AC - Bajo
+31  - Bajo
+162
+172
+24	-	Fuerte
+122
+133
+#03025B	 Linea abajo menu
+
+Tiempo:
+
+Hasta el 21/12/2015 20 horas
+
