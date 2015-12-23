@@ -220,6 +220,57 @@ jQuery(function(){
             $(this).children(".servicio_box_caption").stop().animate({"top": "-" + hide_paragraph_height + "px"});
         }
     });
+    //alianza
+    $(".alianza_box_img").load(function(){
+        img_height = $(this).height();
+        $(this).parent(".alianza_box_wap").height(img_height);
+    });
+    $(window).on("load resize", function(){
+        img_height = $(".alianza_box_img").height();
+        //img_height = 101;
+        //alert(img_height);
+        if($(window).width()>550){
+            $(".alianza_box_wap").height(img_height);
+            $(".alianza_box_wap").each(function(){
+                total_height = $(this).children(".alianza_box_caption").outerHeight();
+                header_height = $(this).children(".alianza_box_caption").children("h1").outerHeight();
+                admin_height = $(this).children(".alianza_box_caption").children("p").eq(0).outerHeight();
+                paragraph_height = $(this).children(".alianza_box_caption").children("p").eq(1).outerHeight();
+                hide_paragraph_height = header_height + admin_height + 10 ;
+                $(this).children(".alianza_box_caption").css({"top": "-" + hide_paragraph_height + "px"});
+            });
+        }else{
+            $(".alianza_box_wap").height(img_height);
+            $(".alianza_box_wap").each(function(){
+                total_height = $(this).children(".alianza_box_caption").outerHeight();
+                header_height = $(this).children(".alianza_box_caption").children("h1").outerHeight();
+                admin_height = $(this).children(".alianza_box_caption").children("p").eq(0).outerHeight();
+                paragraph_height = $(this).children(".alianza_box_caption").children("p").eq(1).outerHeight();
+                hide_paragraph_height = header_height + admin_height + 10 ;
+                $(this).height(total_height+img_height);
+                $(this).children(".alianza_box_caption").css({"top": "0px"});
+            });
+        }
+    });
+    $(".alianza_box_wap").hover(function(){
+        if($(window).width()>550){
+            total_height = $(this).children(".alianza_box_caption").outerHeight();
+            header_height = $(this).children(".alianza_box_caption").children("h1").outerHeight();
+            admin_height = $(this).children(".alianza_box_caption").children("p").eq(0).outerHeight();
+            paragraph_height = $(this).children(".alianza_box_caption").children("p").eq(1).outerHeight();
+            hide_paragraph_height = header_height + admin_height + paragraph_height + 10 ;
+            $(this).children(".alianza_box_caption").stop().animate({"top": "-" + hide_paragraph_height + "px"});
+        }
+    },function(){
+        if($(window).width()>550){
+            total_height = $(this).children(".alianza_box_caption").outerHeight();
+            header_height = $(this).children(".alianza_box_caption").children("h1").outerHeight();
+            admin_height = $(this).children(".alianza_box_caption").children("p").eq(0).outerHeight();
+            paragraph_height = $(this).children(".alianza_box_caption").children("p").eq(1).outerHeight();
+            hide_paragraph_height = header_height + admin_height + 10 ;
+            $(this).children(".alianza_box_caption").stop().animate({"top": "-" + hide_paragraph_height + "px"});
+        }
+    });
     //timeline
     $(window).on("load resize", function(){
         $.timeline_right_position_top = 0 ;
@@ -430,6 +481,21 @@ jQuery(function(){
         }else{
             $("#templatetemo_servicios .servicio_animate_left").css({'left': 0,'opacity':1});
             $("#templatetemo_servicios .servicio_animate_right").css({'left':0,'opacity':1});
+        }
+    });
+    //alianzas
+    //alianza
+    $(document).scroll(function(){
+        document_top = $(document).scrollTop();
+        event_wapper_top = $("#templatemo_alianzas").position().top - $('#templatemo_banner_menu').outerHeight();
+        if(document_top<event_wapper_top){
+            event_animate_num = event_wapper_top - document_top;
+            event_animate_alpha = (1/event_wapper_top)*(document_top);
+            $("#templatetemo_alianzas .alianza_animate_left").css({'left': -event_animate_num,'opacity':event_animate_alpha});
+            $("#templatetemo_alianzas .alianza_animate_right").css({'left':event_animate_num,'opacity':event_animate_alpha});
+        }else{
+            $("#templatetemo_alianzas .alianza_animate_left").css({'left': 0,'opacity':1});
+            $("#templatetemo_alianzas .alianza_animate_right").css({'left':0,'opacity':1});
         }
     });
 });

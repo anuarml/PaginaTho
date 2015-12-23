@@ -84,6 +84,23 @@ h1 {
 }
 #templatemo_banner_menu ul li a ,
 #templatemo_banner_menu ul li a:focus {
+    /*padding-top: 35px;
+    padding-bottom: 35px;
+    font: normal normal normal 15px/23px 'Century Gothic', sans-serif;
+    color: #000;
+    background: repeat-x url("../images/banner_bg.jpg") 0 -94px ;
+    transition-duration: .5s;*/
+}
+#templatemo_banner_menu ul li a:hover ,
+#templatemo_banner_menu ul li a.current
+{
+    //background-position: 0 0px ;
+    //background-color: #f15556;
+    //background-color: #20A2AC;
+    //color: #ffffff;
+}
+#templatemo_banner_menu ul li.tab a ,
+#templatemo_banner_menu ul li.tab a:focus {
     padding-top: 35px;
     padding-bottom: 35px;
     font: normal normal normal 15px/23px 'Century Gothic', sans-serif;
@@ -91,8 +108,8 @@ h1 {
     background: repeat-x url("../images/banner_bg.jpg") 0 -94px ;
     transition-duration: .5s;
 }
-#templatemo_banner_menu ul li a:hover ,
-#templatemo_banner_menu ul li a.current
+#templatemo_banner_menu ul li.tab a:hover ,
+#templatemo_banner_menu ul li.tab a.current
 {
     background-position: 0 0px ;
     //background-color: #f15556;
@@ -430,6 +447,65 @@ h1 {
     padding: 5px 20px 15px 20px;
 }
 #templatemo_servicios .servicio_box_wap h1 {
+    padding: 20px 20px 20px 20px;
+    font-size: 24px;
+    line-height: 24px;
+}
+/*alianzas*/
+#templatemo_alianzas {
+    //background: #6698b5;
+    background: #fff;
+    float: left;
+    overflow: hidden;
+}
+#templatemo_alianzas h1{
+    //color: #fff;
+    color: black;
+}
+#templatemo_alianzas .alianza_box_wap {
+    overflow:hidden;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    //width: 300px;
+    //height: 300px;
+}
+#templatemo_alianzas .alianza_box_wap .alianza_box_img {
+    position: relative;
+    top: 0;
+    height: 100px;
+    //width: 300px;
+    //overflow: hidden;
+}
+#templatemo_alianzas .alianza_box_wap .alianza_box_img img{
+    //height: auto;
+    //width: 400px;
+    //position: relative;
+    float: left;
+    width:  200px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+#templatemo_alianzas .alianza_box_wap .alianza_box_caption {
+    position: relative;
+    top: 0;
+    padding-bottom: 10px;
+    background: #fff;
+    width: 100%;
+    border-top: 3px solid #3c6f8c;
+}
+#templatemo_alianzas .alianza_box_wap h1,
+#templatemo_alianzas .alianza_box_wap p {
+    margin: 0;
+    color: #000000;
+    text-align: left;
+}
+#templatemo_alianzas .alianza_box_wap p {
+    padding: 5px 20px 15px 20px;
+}
+#templatemo_alianzas .alianza_box_wap h1 {
     padding: 20px 20px 20px 20px;
     font-size: 24px;
     line-height: 24px;
