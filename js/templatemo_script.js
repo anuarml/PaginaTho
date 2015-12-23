@@ -169,6 +169,57 @@ jQuery(function(){
             $(this).children(".event_box_caption").stop().animate({"top": "-" + hide_paragraph_height + "px"});
         }
     });
+    //servicio
+    $(".servicio_box_img").load(function(){
+        img_height = $(this).height();
+        $(this).parent(".servicio_box_wap").height(img_height);
+    });
+    $(window).on("load resize", function(){
+        img_height = $(".servicio_box_img").height();
+        //img_height = 101;
+        //alert(img_height);
+        if($(window).width()>550){
+            $(".servicio_box_wap").height(img_height);
+            $(".servicio_box_wap").each(function(){
+                total_height = $(this).children(".servicio_box_caption").outerHeight();
+                header_height = $(this).children(".servicio_box_caption").children("h1").outerHeight();
+                admin_height = $(this).children(".servicio_box_caption").children("p").eq(0).outerHeight();
+                paragraph_height = $(this).children(".servicio_box_caption").children("p").eq(1).outerHeight();
+                hide_paragraph_height = header_height + admin_height + 10 ;
+                $(this).children(".servicio_box_caption").css({"top": "-" + hide_paragraph_height + "px"});
+            });
+        }else{
+            $(".servicio_box_wap").height(img_height);
+            $(".servicio_box_wap").each(function(){
+                total_height = $(this).children(".servicio_box_caption").outerHeight();
+                header_height = $(this).children(".servicio_box_caption").children("h1").outerHeight();
+                admin_height = $(this).children(".servicio_box_caption").children("p").eq(0).outerHeight();
+                paragraph_height = $(this).children(".servicio_box_caption").children("p").eq(1).outerHeight();
+                hide_paragraph_height = header_height + admin_height + 10 ;
+                $(this).height(total_height+img_height);
+                $(this).children(".servicio_box_caption").css({"top": "0px"});
+            });
+        }
+    });
+    $(".servicio_box_wap").hover(function(){
+        if($(window).width()>550){
+            total_height = $(this).children(".servicio_box_caption").outerHeight();
+            header_height = $(this).children(".servicio_box_caption").children("h1").outerHeight();
+            admin_height = $(this).children(".servicio_box_caption").children("p").eq(0).outerHeight();
+            paragraph_height = $(this).children(".servicio_box_caption").children("p").eq(1).outerHeight();
+            hide_paragraph_height = header_height + admin_height + paragraph_height + 10 ;
+            $(this).children(".servicio_box_caption").stop().animate({"top": "-" + hide_paragraph_height + "px"});
+        }
+    },function(){
+        if($(window).width()>550){
+            total_height = $(this).children(".servicio_box_caption").outerHeight();
+            header_height = $(this).children(".servicio_box_caption").children("h1").outerHeight();
+            admin_height = $(this).children(".servicio_box_caption").children("p").eq(0).outerHeight();
+            paragraph_height = $(this).children(".servicio_box_caption").children("p").eq(1).outerHeight();
+            hide_paragraph_height = header_height + admin_height + 10 ;
+            $(this).children(".servicio_box_caption").stop().animate({"top": "-" + hide_paragraph_height + "px"});
+        }
+    });
     //timeline
     $(window).on("load resize", function(){
         $.timeline_right_position_top = 0 ;
@@ -365,7 +416,22 @@ jQuery(function(){
             $("#templatemo_events .event_animate_left").css({'left': 0,'opacity':1});
             $("#templatemo_events .event_animate_right").css({'left':0,'opacity':1});
         }
-    }); 
+    });
+    //servicios
+    //servicio
+    $(document).scroll(function(){
+        document_top = $(document).scrollTop();
+        event_wapper_top = $("#templatemo_servicios").position().top - $('#templatemo_banner_menu').outerHeight();
+        if(document_top<event_wapper_top){
+            event_animate_num = event_wapper_top - document_top;
+            event_animate_alpha = (1/event_wapper_top)*(document_top);
+            $("#templatetemo_servicios .servicio_animate_left").css({'left': -event_animate_num,'opacity':event_animate_alpha});
+            $("#templatetemo_servicios .servicio_animate_right").css({'left':event_animate_num,'opacity':event_animate_alpha});
+        }else{
+            $("#templatetemo_servicios .servicio_animate_left").css({'left': 0,'opacity':1});
+            $("#templatetemo_servicios .servicio_animate_right").css({'left':0,'opacity':1});
+        }
+    });
 });
 
 

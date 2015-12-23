@@ -375,9 +375,10 @@ h1 {
     font-size: 24px;
     line-height: 24px;
 }
-/*events*/
-/*#templatemo_servicios {
-    background: #6698b5;
+/*servicios*/
+#templatemo_servicios {
+    //background: #6698b5;
+    background: #fff;
     float: left;
     overflow: hidden;
 }
@@ -385,17 +386,33 @@ h1 {
     //color: #fff;
     color: black;
 }
-#templatemo_servicios .servicios_box_wap {
+#templatemo_servicios .servicio_box_wap {
     overflow:hidden;
     margin-bottom: 30px;
     cursor: pointer;
     position: relative;
+    //width: 300px;
+    //height: 300px;
 }
-#templatemo_servicios .servicios_box_wap .servicios_box_img {
+#templatemo_servicios .servicio_box_wap .servicio_box_img {
     position: relative;
     top: 0;
+    height: 100px;
+    //width: 300px;
+    //overflow: hidden;
 }
-#templatemo_servicios .servicios_box_wap .servicios_box_caption {
+#templatemo_servicios .servicio_box_wap .servicio_box_img img{
+    //height: auto;
+    //width: 400px;
+    //position: relative;
+    float: left;
+    width:  200px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+#templatemo_servicios .servicio_box_wap .servicio_box_caption {
     position: relative;
     top: 0;
     padding-bottom: 10px;
@@ -403,20 +420,20 @@ h1 {
     width: 100%;
     border-top: 3px solid #3c6f8c;
 }
-#templatemo_servicios .servicios_box_wap h1,
-#templatemo_servicios .servicios_box_wap p {
+#templatemo_servicios .servicio_box_wap h1,
+#templatemo_servicios .servicio_box_wap p {
     margin: 0;
     color: #000000;
     text-align: left;
 }
-#templatemo_servicios .servicios_box_wap p {
+#templatemo_servicios .servicio_box_wap p {
     padding: 5px 20px 15px 20px;
 }
-#templatemo_servicios .servicios_box_wap h1 {
+#templatemo_servicios .servicio_box_wap h1 {
     padding: 20px 20px 20px 20px;
     font-size: 24px;
     line-height: 24px;
-}*/
+}
 /*timeline*/
 #templatemo_timeline {
     background: #fff;
