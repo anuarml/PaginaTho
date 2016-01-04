@@ -1,22 +1,3 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "email@example.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -854,11 +835,37 @@ if(isset($_POST['submit'])){
                 </li>
            </ul>
         </div>
-        <form action="" method="post" class="col-md-8">
+        <form action="index.php" method="post" class="col-md-8">
             <div class="row">
                 <div class="col-md-12">
                 <h2>Envíe su mensaje</h2>
                 </div>
+                <?php
+                    error_reporting(-1);
+                    ini_set('display_errors', 'On');
+                    set_error_handler("var_dump");
+
+                    if (isset( $_POST['submit'])) {
+                        $name = $_POST['name'];
+                        $email = $_POST['email'];
+                        $phone = $_POST['phone'];
+                        $message = $_POST['message'];
+                        $headers =  "From: $name";
+                        $to = $_POST['tomail']; 
+                        $subject = $_POST['subject'];
+                        $body = "From: $name\nPhone: $phone\nE-Mail: $email\nMessage:\n$message";
+
+                        if ($name != '' && $email != '') {
+                            if (mail ($to, $subject, $body, $headers)) { 
+                                echo '<p>Se ha enviado el mensaje</p>';
+                            } else { 
+                                echo '<p>Ocurrió un problema al enviar el mensaje, intente de nuevo</p>'; 
+                            } 
+                        } else {
+                            echo '<p>Debe completar los campos</p>';
+                        }
+                    }
+                ?>
                 <div class="col-md-12">
                     <p>Nombre y Apellidos</p>
                     <input type="text" name="name" id="name" placeholder="Tu nombre y apellidos" />
@@ -874,8 +881,10 @@ if(isset($_POST['submit'])){
                 <div class="col-md-6">
                     <p>Email destinatario</p>
                     <select id = "tomail" name= "tomail" class="form-control">
-                      <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
-                      <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option>
+                 <!-- <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
+                      <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option> -->
+                      <option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
+                      <option value="juralo@tho.mx">juralo@tho.mx</option>
                     </select>
                 </div>
                 <div class="col-md-6">
@@ -915,28 +924,6 @@ if(isset($_POST['submit'])){
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
     }
-</script>
-<script type="text/javascript">
- function sendEmail(){
-    var data = {
-        name: $("#name").val(),
-        toemail: $("#tomail").val(),
-        fromemail: $("#email").val(),
-        subject: $("#subject").val(),
-        phone: $("#phone").val(),
-        message: $("#message").val()
-    };
-    $.ajax({
-        type: "POST",
-        url: "email.php",
-        data: data,
-        success: function(){
-            // Redirection on success
-            var url = "http://example.com/confirmation.html";    
-            $(location).attr('href',url);
-        }
-    });
-}
 </script>
 </body>
 </html>
