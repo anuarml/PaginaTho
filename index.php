@@ -835,37 +835,12 @@
                 </li>
            </ul>
         </div>
-        <form action="index.php" method="post" class="col-md-8">
+        <form method="post" class="col-md-8" onsubmit="sendMail(); return false">
             <div class="row">
                 <div class="col-md-12">
-                <h2>Envíe su mensaje</h2>
+                    <h2>Envíe su mensaje</h2>
                 </div>
-                <?php
-                    error_reporting(-1);
-                    ini_set('display_errors', 'On');
-                    set_error_handler("var_dump");
-
-                    if (isset( $_POST['submit'])) {
-                        $name = $_POST['name'];
-                        $email = $_POST['email'];
-                        $phone = $_POST['phone'];
-                        $message = $_POST['message'];
-                        $headers =  "From: $name";
-                        $to = $_POST['tomail']; 
-                        $subject = $_POST['subject'];
-                        $body = "From: $name\nPhone: $phone\nE-Mail: $email\nMessage:\n$message";
-
-                        if ($name != '' && $email != '') {
-                            if (mail ($to, $subject, $body, $headers)) { 
-                                echo '<p>Se ha enviado el mensaje</p>';
-                            } else { 
-                                echo '<p>Ocurrió un problema al enviar el mensaje, intente de nuevo</p>'; 
-                            } 
-                        } else {
-                            echo '<p>Debe completar los campos</p>';
-                        }
-                    }
-                ?>
+                
                 <div class="col-md-12">
                     <p>Nombre y Apellidos</p>
                     <input type="text" name="name" id="name" placeholder="Tu nombre y apellidos" />
@@ -881,10 +856,10 @@
                 <div class="col-md-6">
                     <p>Email destinatario</p>
                     <select id = "tomail" name= "tomail" class="form-control">
-                 <!-- <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
-                      <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option> -->
-                      <option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
-                      <option value="juralo@tho.mx">juralo@tho.mx</option>
+                      <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
+                      <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option> 
+                      <!--<option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
+                      <option value="juralo@tho.mx">juralo@tho.mx</option>-->
                     </select>
                 </div>
                 <div class="col-md-6">
@@ -900,7 +875,7 @@
                     </br><input type="submit" name="submit" value="Submit">
                 </div>
                 <div class="col-xs-6 col-sm-3">
-                    <button type="reset">Limpiar</button>
+                    <button type="reset" >Limpiar</button>
                 </div>
             </div>
         </form>
@@ -924,6 +899,32 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
     }
+
+    function sendMail () {
+        var data = {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            phone: $("#phone").val(),
+            tomail: $("#tomail option:selected").text(),
+            subject: $('#subject').val(),
+            message: $('#message').val()
+        };
+
+        console.log(data);
+        $.ajax({
+            type: "POST",
+            url: "php/sendEmail.php",
+            data: data,
+            success: function(){
+                // Redirection on success
+                alert("Correo enviado");
+                //var url = "http://www.tho.com/index.php";    
+                //$(location).attr('href',url);
+            }
+        });
+        //alert("hola");
+    }
+    
 </script>
 </body>
 </html>

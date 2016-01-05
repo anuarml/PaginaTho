@@ -13,3 +13,104 @@ Tiempo:
 Hasta el 21/12/2015 20 horas
 
 Hasta el 22/12/2015 24 horas
+
+Hasta el 04/01/2016 28 horas
+
+Tiempo en solucionar el envio de correo: 8 horas
+
+
+<?php
+                    error_reporting(-1);
+                    ini_set('display_errors', 'On');
+                    set_error_handler("var_dump");
+
+                    if (isset( $_POST['submit'])) {
+                        $name = $_POST['name'];
+                        $email = $_POST['email'];
+                        $phone = $_POST['phone'];
+                        $message = $_POST['message'];
+                        $headers =  "From: $name";
+                        $to = $_POST['tomail']; 
+                        $subject = $_POST['subject'];
+                        $body = "From: $name\nPhone: $phone\nE-Mail: $email\nMessage:\n$message";
+
+                        if ($name != '' && $email != '') {
+                            if (mail ($to, $subject, $body, $headers)) { 
+                                echo '<p>Se ha enviado el mensaje</p>';
+                                echo $to;
+                            } else { 
+                                echo '<p>Ocurrió un problema al enviar el mensaje, intente de nuevo</p>'; 
+                            } 
+                        } else {
+                            echo '<p>Debe completar los campos</p>';
+                        }
+                    }
+                ?>
+
+
+Configuraciones para el email:
+Changes required in sendmail.ini
+
+smtp_server=smtp.gmail.com
+smtp_port=587
+error_logfile=error.log
+debug_logfile=debug.log
+auth_username=your-gmail-id@gmail.com
+auth_password=your-gmail-password
+force_sender=your-gmail-id@gmail.com
+
+Changes required in php.ini
+
+SMTP=smtp.gmail.com
+smtp_port=587
+sendmail_from = your-gmail-id@gmail.com
+sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+;sendmail_path = "C:\xampp\mailtodisk\mailtodisk.exe"
+
+
+Poner como administrador sendmail:
+The problem is that sendmail has to be run as an administrator. This is the solution to help any one on my situation.
+
+1º Right click on sendmail.exe
+
+2º Properties
+
+3º Compatibility
+
+4º Change the configuration for all users
+
+5º Execute as Windows XP SP 3
+
+6º Execute as adminitrator
+
+And save :D
+
+Dejar al correo acceder las apps menos seguras:
+Go to the "Less secure apps" section in My Account.
+Next to "Access for less secure apps," select Turn on. (Note to Google Apps users: This setting is hidden if your administrator has locked less secure app account access.)
+
+Errores:
+I was getting this due to wrong port for SSL.
+SSL = 465 TLS = 587
+
+Paginas Consultadas:
+http://stackoverflow.com/questions/2227702/php-mailer-error
+http://www.lawebdelprogramador.com/foros/PHP/883295-No-puedo-enviar-correos-desde-PHP.html
+https://www.google.com.mx/search?biw=1366&bih=667&q=php+mailer+Se+produjo+un+error+durante+el+intento+de+conexi%C3%B3n+ya+que+la+parte+conectada+no+respondi++adecuadamente+tras+un+periodo+de+tiempo&oq=php+mailer+Se+produjo+un+error+durante+el+intento+de+conexi%C3%B3n+ya+que+la+parte+conectada+no+respondi++adecuadamente+tras+un+periodo+de+tiempo&gs_l=serp.3...12451.14091.0.14186.11.8.0.0.0.0.0.0..0.0....0...1c.1.64.serp..11.0.0.FkrjV6tV_kE
+http://www.adminkit.net/telnet.aspx
+https://www.arclab.com/en/kb/email/list-of-smtp-and-pop3-servers-mailserver-list.html   
+https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+https://github.com/Synchro/PHPMailer
+http://deepakssn.blogspot.mx/2006/06/gmail-php-send-email-using-php-with.html   //Desactualizada
+http://stackoverflow.com/questions/15965376/how-to-configure-xampp-to-send-mail-from-localhost
+https://www.reddit.com/r/PHPhelp/comments/2t6bv4/i_have_configured_xampp_so_that_i_can_send_emails/
+http://stackoverflow.com/questions/26108030/sendmail-error-during-delivery-connection-closed-gracefully-mail-function-php
+http://stackoverflow.com/questions/4376701/configure-gmail-as-smtp-in-xampp-to-send-mail-got-error-why
+https://www.google.com.mx/search?espv=2&q=connection+closed+gracefully+sendmail+xampp&oq=connection+closed+gracefully+sendmail+xampp&gs_l=serp.3..0i19.1504.2284.0.2475.6.2.0.4.4.0.157.270.0j2.2.0....0...1c.1.64.serp..0.6.275.LTBox2yLktk
+http://stackoverflow.com/questions/15965376/how-to-configure-xampp-to-send-mail-from-localhost
+https://www.google.com.mx/search?q=sendmail+not+in+my+xampp&oq=sendmail+not+in+my+xampp&aqs=chrome..69i57.4941j0j4&sourceid=chrome&es_sm=0&ie=UTF-8
+http://php.codeindepth.com/php-sending-mail/
+http://php.net/manual/es/function.mail.php
+http://stackoverflow.com/questions/24644436/php-mail-form-doesnt-complete-sending-e-mail
+http://stackoverflow.com/questions/6403746/php-mail-doesnt-work
+http://webdesignpub.com/html-contact-form-captcha/
