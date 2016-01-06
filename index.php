@@ -813,7 +813,7 @@
         </div>
         <div class="col-md-4">
             <h2>Contáctenos</h2>
-            <p>Aenean in lectus enim. Phasellus eu egestas libero. Vivamus ultrices ligula a dapibus lobortis. Sed viverra nunc magna, quis placerat augue pellentesque quis. Sed nec pellentesque dolor.</p>
+            <!--<p>Aenean in lectus enim. Phasellus eu egestas libero. Vivamus ultrices ligula a dapibus lobortis. Sed viverra nunc magna, quis placerat augue pellentesque quis. Sed nec pellentesque dolor.</p>-->
             <br>
             <p><strong>Email:</strong> edvin.diaz@tho.mx, juralo@tho.mx<br /><strong>Phone:</strong> (999) 925-9212, 925-9214<br /><strong>Website:</strong> www.tho.com<br /><strong>Address:</strong> Calle 17 No. 219-C x 24 y 26, <br>Col. García Ginerés, 97070. Merida, Yucatán, Méx.</p>
 
@@ -857,7 +857,8 @@
                     <p>Email destinatario</p>
                     <select id = "tomail" name= "tomail" class="form-control">
                       <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
-                      <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option> 
+                      <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option>
+                      <option value="yussel.paredes@tho.mx">yussel.paredes@tho.mx</option>
                       <!--<option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
                       <option value="juralo@tho.mx">juralo@tho.mx</option>-->
                     </select>
@@ -901,7 +902,7 @@
     }
 
     function sendMail () {
-        var data = {
+        var formData = {
             name: $("#name").val(),
             email: $("#email").val(),
             phone: $("#phone").val(),
@@ -910,14 +911,27 @@
             message: $('#message').val()
         };
 
-        console.log(data);
+        //console.log(data);
         $.ajax({
             type: "POST",
             url: "php/sendEmail.php",
-            data: data,
-            success: function(){
+            data: formData,
+            dataType: 'text',
+            success: function(data){
                 // Redirection on success
-                alert("Correo enviado");
+                console.log(data);
+                switch(data){
+                    case '101':
+                        alert("Debe llenar todos los campos");
+                        break;
+                    case '102':
+                        alert("Hubo un error en el servidor de envio de correos");
+                        break;
+                    default:
+                        alert("Correo enviado");
+                        break;
+                }
+                //alert("Correo enviado");
                 //var url = "http://www.tho.com/index.php";    
                 //$(location).attr('href',url);
             }

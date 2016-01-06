@@ -29,37 +29,52 @@
 	{
 	echo "Message has been sent";
 	}*/
-	$mail = new PHPMailer;
-	//$mail->SMTPDebug = 2;
-	$mail->isSMTP();                                      // Set mailer to use SMTP
-	$mail->Host = 'smtp.gmail.com;smtp.gmail.com';  // Specify main and backup SMTP servers
-	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'anuar.morales@tho.mx';                 // SMTP username
-	$mail->Password = '';                           // SMTP password
-	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-	$mail->Port = 465;                                    // TCP port to connect to
+	$noSetData = 101;
+	$failedMessageSent = 102;
+	if (!empty($_POST["name"])) {
+		$mail = new PHPMailer;
+		//$mail->SMTPDebug = 2;
+		$mail->isSMTP();                                      // Set mailer to use SMTP
+		$mail->Host = 'smtp.gmail.com;smtp.gmail.com';  // Specify main and backup SMTP servers
+		$mail->SMTPAuth = true;                               // Enable SMTP authentication
+		$mail->Username = 'portalweb@tho.mx';                 // SMTP username
+		$mail->Password = 'Nieves2015$..';                           // SMTP password
+		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+		$mail->Port = 465;                                    // TCP port to connect to
+		$name = $_POST['name'];
+	    $tomail = $_POST['tomail'];
+		$mail->setFrom('portalweb@tho.mx', $name);
+		$mail->addAddress($tomail);     // Add a recipient
+		//$mail->addAddress('yussel.paredes@gmail.com', 'Yussel');               // Name is optional
+		//$mail->addAddress('anuarml93@gmail.com'); 
+		//$mail->addReplyTo('anuar.morales@tho.mx', 'Information');
+		//$mail->addCC('cc@example.com');
+		//$mail->addBCC('bcc@example.com');
 
-	$mail->setFrom('anuar.morales@tho.mx', 'Mailer');
-	$mail->addAddress('anuarml93@gmail.com', 'Anuar');     // Add a recipient
-	$mail->addAddress('yussel.paredes@gmail.com');               // Name is optional
-	$mail->addAddress('vanessa.fragoso@tho.mx'); 
-	$mail->addReplyTo('anuar.morales@tho.mx', 'Information');
-	//$mail->addCC('cc@example.com');
-	//$mail->addBCC('bcc@example.com');
+		//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+		//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+		$mail->isHTML(true);                                  // Set email format to HTML
+		$email = $_POST['email'];
+	    $phone = $_POST['phone'];
+		$subject = $_POST['subject'];
+	    $message = $_POST['message'];
+		/*$mail->Subject = 'Importante Yussel';
+		$mail->Body    = 'Favor de pasar a mi <b>oficina!</b>';
+		$mail->AltBody = 'Saludos';*/
+		$mail->Subject = $subject;
+		$mail->Body    = 'E-mail: '.$email.'<br>Telefono: '.$phone.'<br>Mensaje: <br>'.$message;
+		$mail->AltBody = $message;
 
-	//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-	//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-	$mail->isHTML(true);                                  // Set email format to HTML
-
-	$mail->Subject = 'Prueba pagina';
-	$mail->Body    = 'Pagina para probar el envio de <b>correos!</b>';
-	$mail->AltBody = 'Pagina para cuando no se ve el html';
-
-	if(!$mail->send()) {
-	    echo 'Message could not be sent.';
-	    echo 'Mailer Error: ' . $mail->ErrorInfo;
-	} else {
-	    echo 'Message has been sent';
+		if(!$mail->send()) {
+		    //echo 'Message could not be sent.';
+		    //echo 'Mailer Error: ' . $mail->ErrorInfo;
+		    echo $failedMessageSent;
+		} else {
+		    echo 'Message has been sent';
+		}
+	}else{
+		//echo '<p>No estan seteadas las variables<p>';
+		echo $noSetData;
 	}
 
 
