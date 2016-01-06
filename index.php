@@ -835,7 +835,7 @@
                 </li>
            </ul>
         </div>
-        <form method="post" class="col-md-8" onsubmit="sendMail(); return false">
+        <form class="col-md-8" onsubmit="sendMail(); return false">
             <div class="row">
                 <div class="col-md-12">
                     <h2>Envíe su mensaje</h2>
@@ -916,7 +916,7 @@
             type: "POST",
             url: "php/sendEmail.php",
             data: formData,
-            dataType: 'text',
+            dataType: 'html',
             success: function(data){
                 // Redirection on success
                 console.log(data);
