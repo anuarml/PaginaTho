@@ -196,9 +196,9 @@
                     <img src="images/templatemo_member_03.jpg" class="img-responsive" alt="Marketing Executive" />
                 </div>
                 <div class="col-sm-9">
-                    <h2>Julia Van</h2>
-                    <h3>Marketing Executive</h3>
-                    <p>Maecenas nec rhoncus orci. Morbi tempus ut leo ac varius. Cras convallis sagittis dignissim. Aenean diam libero, venenatis eu risus eu, tincidunt porttitor orci. Nulla consequat mi et lectus vehicula condimentum. Nulla ullamcorper dolor vehicula dolor interdum, eget fermentum ligula bibendum.</p>
+                    <h2>Van Frag</h2>
+                    <h3>Jr. Developer</h3>
+                    <p>Uady Fmat- 2012-2016. Ett- 2015-Hasta la fecha</p>
                 </div>
             </div><!--.testimonial_text-->
             <div class="testimonial_text">
