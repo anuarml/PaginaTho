@@ -1,3 +1,22 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "email@example.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -835,12 +854,12 @@
                 </li>
            </ul>
         </div>
-        <form action="#" method="post" class="col-md-8">
+        <form action="" method="post" class="col-md-8">
             <div class="row">
                 <div class="col-md-12">
-                <h2>Envie su mensaje</h2>
+                <h2>Envíe su mensaje</h2>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <p>Nombre y Apellidos</p>
                     <input type="text" name="name" id="name" placeholder="Tu nombre y apellidos" />
                 </div>
@@ -850,7 +869,15 @@
                 </div>
                 <div class="col-md-6">
                     <p>Teléfono</p>
-                    <input type="text" name="telefono" id="telefono" placeholder="Tu teléfono" />
+                    <input type="text" name="phone" id="phone" placeholder="Tu teléfono" />
+                </div>
+                <div class="col-md-6">
+                    <p>Email destinatario</p>
+                    <select id = "tomail" name= "tomail" class="form-control">
+                      <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
+                      <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option>
+                      <option value="yussel.paredes@tho.mx">yussel.paredes@tho.mx</option>
+                    </select>
                 </div>
                 <div class="col-md-6">
                     <p>Asunto</p>
@@ -861,7 +888,8 @@
                     <textarea name="message" id="message"  placeholder="Escribe tu mensaje aqui..."></textarea>
                 </div>
                 <div class="col-xs-6 col-sm-3 col-md-offset-6">
-                    <button type="submit">Enviar</button>
+                   <!--  <button type="submit" onclick = "sendMail();">Enviar</button> -->
+                    </br><input type="submit" name="submit" value="Submit">
                 </div>
                 <div class="col-xs-6 col-sm-3">
                     <button type="reset">Limpiar</button>
@@ -888,6 +916,28 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
     }
+</script>
+<script type="text/javascript">
+ function sendEmail(){
+    var data = {
+        name: $("#name").val(),
+        toemail: $("#tomail").val(),
+        fromemail: $("#email").val(),
+        subject: $("#subject").val(),
+        phone: $("#phone").val(),
+        message: $("#message").val()
+    };
+    $.ajax({
+        type: "POST",
+        url: "email.php",
+        data: data,
+        success: function(){
+            // Redirection on success
+            var url = "http://example.com/confirmation.html";    
+            $(location).attr('href',url);
+        }
+    });
+}
 </script>
 </body>
 </html>
