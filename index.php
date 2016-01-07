@@ -62,7 +62,7 @@
 
 <div id="templatemo_mobile_menu">
         <ul class="nav nav-pills nav-stacked">
-            <li><a href=""><div id="google_translate_element"></div></a></li>
+            
             <li><a href="#templatemo_banner_slide"><i class="glyphicon glyphicon-home"></i> &nbsp; Principal</a></li>
             <li><a href="#templatemo_about"><i class="glyphicon glyphicon-user"></i> &nbsp; Acerca De</a></li>
             <li><a href="#templatemo_servicios"><i class="glyphicon glyphicon-lock"></i> &nbsp; Servicios</a></li>
@@ -70,6 +70,7 @@
             <li><a href="#templatemo_alianzas"><i class="glyphicon glyphicon-link"></i> &nbsp; Alianzas</a></li>
             <li><a href="#templatemo_events"><i class="glyphicon glyphicon-calendar"></i> &nbsp; Eventos</a></li>
             <li><a href="#templatemo_contact"><i class="glyphicon glyphicon-envelope"></i> &nbsp; Contacto</a></li>
+            <!--<li><a href="" id="googleTransA"></a></li>-->
             <!--<li><div id="google_translate_element"></div></li>-->
         </ul>
 </div>
@@ -100,7 +101,7 @@
                     <!--<li><a href="#templatemo_timeline">Timeline</a></li>
                     <li><a rel="nofollow" href="https://www.facebook.com/Estrategia-Y-Tecnologia-THO-210138125739600/?fref=ts" class="external-link">External</a></li>-->
                     <li class="tab"><a href="#templatemo_contact">Contacto</a></li>
-                    <li><a href=""><div id="google_translate_element"></div></a></li>
+                    <li ><a href=""><div id="google_translate_element"></div></a></li>
                  </ul>
             </div>
             <div class="col-xs-8 visible-xs visible-sm">
@@ -860,8 +861,8 @@
                     <select id = "tomail" name= "tomail" class="form-control">
                       <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
                       <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option>
-                      <option value="yussel.paredes@tho.mx">yussel.paredes@tho.mx</option>
-                      <!--<option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
+                      <!--<option value="yussel.paredes@tho.mx">yussel.paredes@tho.mx</option>
+                      <option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
                       <option value="juralo@tho.mx">juralo@tho.mx</option>-->
                     </select>
                 </div>
@@ -902,6 +903,11 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
     }
+
+    /*setTimeout(function(){
+        $('#google_translate_element').clone().appendTo('#googleTransA');
+        console.log($('#google_translate_element').clone());
+    }, 3000);*/
 
     function sendMail () {
         var formData = {
