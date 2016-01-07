@@ -62,6 +62,7 @@
 
 <div id="templatemo_mobile_menu">
         <ul class="nav nav-pills nav-stacked">
+            <li><a href=""><div id="google_translate_element"></div></a></li>
             <li><a href="#templatemo_banner_slide"><i class="glyphicon glyphicon-home"></i> &nbsp; Principal</a></li>
             <li><a href="#templatemo_about"><i class="glyphicon glyphicon-user"></i> &nbsp; Acerca De</a></li>
             <li><a href="#templatemo_servicios"><i class="glyphicon glyphicon-lock"></i> &nbsp; Servicios</a></li>
@@ -88,7 +89,7 @@
                     <div id="google_translate_element"></div>
                 </a>
             </div>-->
-            <div class="col-sm-2 col-md-5 col-lg-10 hidden-xs">
+            <div class="col-md-5 col-lg-10 hidden-sm hidden-xs">
                 <ul class="nav nav-justified">
                     <li class="tab"><a href="#templatemo_banner_slide">Principal</a></li>
                     <li class="tab"><a href="#templatemo_about">Acerca De</a></li>
@@ -102,7 +103,7 @@
                     <li><a href=""><div id="google_translate_element"></div></a></li>
                  </ul>
             </div>
-            <div class="col-xs-8 visible-xs">
+            <div class="col-xs-8 visible-xs visible-sm">
                 <a href="#" id="mobile_menu"><span class="glyphicon glyphicon-th-list"></span></a>
             </div>
         </div>
