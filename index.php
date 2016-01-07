@@ -62,12 +62,13 @@
 
 <div id="templatemo_mobile_menu">
         <ul class="nav nav-pills nav-stacked">
-            <li><a href="#templatemo_banner_slide"><i class="glyphicon glyphicon-home"></i> &nbsp; Home</a></li>
-            <li><a href="#templatemo_about"><i class="glyphicon glyphicon-briefcase"></i> &nbsp; About</a></li>
-            <li><a href="#templatemo_events"><i class="glyphicon glyphicon-bullhorn"></i> &nbsp; Events</a></li>
-            <li><a href="#templatemo_timeline"><i class="glyphicon glyphicon-calendar"></i> &nbsp; Timeline</a></li>
-            <li><a rel="nofollow" href="https://www.facebook.com/Estrategia-Y-Tecnologia-THO-210138125739600/?fref=ts" class="external-link"><i class="glyphicon glyphicon-export"></i> &nbsp; External</a></li>
-            <li><a href="#templatemo_contact"><i class="glyphicon glyphicon-phone-alt"></i> &nbsp; Contact</a></li>
+            <li><a href="#templatemo_banner_slide"><i class="glyphicon glyphicon-home"></i> &nbsp; Principal</a></li>
+            <li><a href="#templatemo_about"><i class="glyphicon glyphicon-user"></i> &nbsp; Acerca De</a></li>
+            <li><a href="#templatemo_servicios"><i class="glyphicon glyphicon-lock"></i> &nbsp; Servicios</a></li>
+            <li><a href="#templatemo_proyectos"><i class="glyphicon glyphicon-briefcase"></i> &nbsp; Proyectos</a></li>
+            <li><a href="#templatemo_alianzas"><i class="glyphicon glyphicon-link"></i> &nbsp; Alianzas</a></li>
+            <li><a href="#templatemo_events"><i class="glyphicon glyphicon-calendar"></i> &nbsp; Eventos</a></li>
+            <li><a href="#templatemo_contact"><i class="glyphicon glyphicon-envelope"></i> &nbsp; Contacto</a></li>
             <!--<li><div id="google_translate_element"></div></li>-->
         </ul>
 </div>
@@ -87,7 +88,7 @@
                     <div id="google_translate_element"></div>
                 </a>
             </div>-->
-            <div class="col-sm-10 hidden-xs">
+            <div class="col-sm-2 col-md-5 col-lg-10 hidden-xs">
                 <ul class="nav nav-justified">
                     <li class="tab"><a href="#templatemo_banner_slide">Principal</a></li>
                     <li class="tab"><a href="#templatemo_about">Acerca De</a></li>
@@ -97,7 +98,7 @@
                     <li class="tab"><a href="#templatemo_events">Eventos</a></li>
                     <!--<li><a href="#templatemo_timeline">Timeline</a></li>
                     <li><a rel="nofollow" href="https://www.facebook.com/Estrategia-Y-Tecnologia-THO-210138125739600/?fref=ts" class="external-link">External</a></li>-->
-                    <li class="tab"><a href="#templatemo_contact">Contact</a></li>
+                    <li class="tab"><a href="#templatemo_contact">Contacto</a></li>
                     <li><a href=""><div id="google_translate_element"></div></a></li>
                  </ul>
             </div>
@@ -111,7 +112,7 @@
     <div class="container-fluid">
         <h1>Quienes somos</h1>
         <div class="col-sm-6 col-md-3"> </div>
-        <div class="col-sm-6 col-md-6 about_icon"> 
+        <div class="col-sm-12 col-md-6 col-xs-12 about_icon"> 
             <h2>Somos un grupo multidisciplinario focalizado en proporcionar soluciones integrales de sistemas de información para las empresas del sureste del país. Formado por:</h2>
             <p>&bull;Consultores Administrativos y de Organización.<br/>&bull;Implementadores Certificados en Sistema ERP Intélisis.<br/>&bull;Ingenieros Certificados por Microsoft.<br/>&bull;Contadores públicos.<br/>&bull;Auditores.<br/>&bull;Personal Auxiliar.</p>
             <h2>Nos orientamos a la sistematización y automatización, aprovechando los desarrollos tecnológicos actuales.</h2>
