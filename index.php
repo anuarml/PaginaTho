@@ -225,7 +225,7 @@
     <div class="container-fluid">
         <h1>Servicios</h1>
         
-        <div class="col-sm-6 col-md-12 about_icon"> 
+        <div class="col-sm-6 col-md-12 col-sm-offset-3 col-md-offset-0 about_icon"> 
             <h4><p>&bull;Revisión y determinación de políticas de operación (suficiencia y eficiencia).<br/>&bull;Análisis y desarrollo de sistemas y procedimientos.<br/>&bull;Análisis de la estructura organizacional.<br/>&bull;Auditoria interna integral, operacional y de sistemas.<br/>&bull;Asesoría e implementación de servidores Microsoft.<br/>&bull;Asesoría, implementación y puesta a punto del sistema integral de información Intélisis Socio Certificado Implementador.<br/>&bull;Implementación y puesta a punto de redes inalámbricas.</p></h4>
         </div>
         <!--<h1>Servicios</h1>
@@ -242,29 +242,29 @@
                 </div>
             </div>
         </div>-->
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>-->
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="http://www.acronis.com/"><img src="images/servicios/acronis-logo.jpg" class="img-responsive" alt="Acronis" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="http://www.eset.com"><img src="images/servicios/eset_logo.png" class="img-responsive" alt="Eset" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="https://technet.microsoft.com/es-mx/library/hh831531.aspx"><img src="images/servicios/Hyperv_logo.png" class="img-responsive" alt="Hyperv" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="http://www.intelisis.com/"><img src="images/servicios/Intelisis-logo.jpg" class="img-responsive" alt="Intelisis" /></a>
@@ -277,28 +277,28 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="https://www.microsoft.com"><img src="images/servicios/microsoft_logo.jpg" class="img-responsive" alt="Microsoft" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="https://www.synology.com"><img src="images/servicios/synology_logo.png" class="img-responsive" alt="Synology" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="http://www.vmware.com/"><img src="images/servicios/vmware_logo.jpg" class="img-responsive" alt="VMWare" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="http://www.vmware.com/"><img src="images/servicios/watchguard-logo.jpg" class="img-responsive" alt="Watchguard" /></a>
@@ -654,25 +654,25 @@
 <div id="templatemo_alianzas" class="container_wapper"><!--templatetemo_alianzas-->
     <div class="container-fluid">
         <h1>Alianzas</h1>
-        <div class="col-sm-6 col-md-3"></div>
-        <div class="col-sm-6 col-md-9 about_icon"> 
-            <h4><p>&bull;Intelisis.<br/><br/>&bull;TIC Consultores, S. A. de C. V.<br/>Tels. (999) 926.54.18 y (999) 926.83.55<br/>Cel. (999) 970.08.93 <br/>raul.rebolledo@ticc.com.mx<br/><a href="http://www.ticc.com.mx/">www.ticc.com.mx</a></p></h4>
+        <div class="col-xs-4 col-sm-4 col-md-4"></div>
+        <div class="col-xs-8 col-sm-8 col-md-8 about_icon"> 
+            <h4><p>&bull;Intelisis.<br/></h4>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0 hidden-xs"></div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <!--<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-0 hidden-xs"></div>-->
+        <div class="col-xs-8 col-xs-offset-4 col-sm-9 col-sm-offset-4 col-md-3 col-md-offset-4">
             <div class="alianza_box_wap alianza_animate_right">
                 <div class="alianza_box_img">
                     <a href="http://www.intelisis.com/"><img src="images/alianzas/Intelisis-logo.jpg" class="img-responsive" alt="Intelisis" /></a>
                 </div>
             </div>
         </div>       
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <!--<div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
             <div class="alianza_box_wap alianza_animate_left">
                 <div class="alianza_box_img">
                     <a href="http://www.ticc.com.mx/"><img src="images/alianzas/logo-ticc.png" class="img-responsive" alt="TIC" /></a>
                 </div>
             </div>
-        </div>    
+        </div>-->   
     </div>
 </div><!--templatetemo_alianzas-->
 <div id="templatemo_events" class="container_wapper">
