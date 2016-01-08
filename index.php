@@ -18,9 +18,9 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="./favicon.png" />		
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/librerias/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/librerias/bootstrap.min.css" rel="stylesheet">
     <!-- Template  -->
     <link href="css/templatemo_style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -78,7 +78,7 @@
     <div id="templatemo_banner_menu">
         <div class="container-fluid">
             <div class="col-lg-2 col-xs-3 templatemo_logo">
-            	<a href="#">
+            	<a href="login.php">
                 	<img src="images/LogoETTCompleto.png" id="logo_img" alt="dragonfruit website template" title="ETT" />
                     <!--<h1 id="logo_text">ETT</h1>-->
                 	<!--<h1 id="logo_text">Dragon<span>fruit</span></h1>
@@ -891,11 +891,11 @@
         <p id="footer">Copyright &copy; 2015 Estrategia y Tecnología Tho</p>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.singlePageNav.min.js"></script>
-<script src="js/unslider.min.js"></script>
+<script src="js/librerias/jquery.min.js"></script>
+<script src="js/librerias/jquery-ui.min.js"></script>
+<script src="js/librerias/bootstrap.min.js"></script>
+<script src="js/librerias/jquery.singlePageNav.min.js"></script>
+<script src="js/librerias/unslider.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 <script src="js/templatemo_script.js"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

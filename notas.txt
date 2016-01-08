@@ -16,6 +16,9 @@ Hasta el 22/12/2015 24 horas
 
 Hasta el 04/01/2016 28 horas
 
+Hasta el 08/01/2016 44 horas
+
+
 Tiempo en solucionar el envio de correo: 8 horas
 
 
@@ -114,3 +117,7 @@ http://php.net/manual/es/function.mail.php
 http://stackoverflow.com/questions/24644436/php-mail-form-doesnt-complete-sending-e-mail
 http://stackoverflow.com/questions/6403746/php-mail-doesnt-work
 http://webdesignpub.com/html-contact-form-captcha/
+
+
+Encripcion
+http://stackoverflow.com/questions/5089841/two-way-encryption-i-need-to-store-passwords-that-can-be-retrieved
