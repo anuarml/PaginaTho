@@ -65,8 +65,8 @@ function requestUser(){
 			bootbox.alert("El nombre de usuario y la contraseña no coinciden");
 		}
 	};
-
-	var url = 'php/db/getUser.php?username='+username +'&password='+ password;
+	var url='';
+	//var url = 'php/db/getUser.php?username='+username +'&password='+ password;
 	ajaxRequest('GET', url, handle, null);
 	
 }
