@@ -59,8 +59,11 @@ function requestUser(){
 			//oStorage.store('oUser',obj);
 			//window.location = 'index.html';
 			//decryptPassword(obj);
-			bootbox.alert("Bienvenido");
-			console.log(obj);
+			bootbox.alert("Bienvenido",function(){
+				window.location="adminPanel.php";
+			});
+			//console.log(obj);
+			
 		}else{
 			bootbox.alert("El nombre de usuario y la contraseña no coinciden");
 		}

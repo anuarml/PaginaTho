@@ -4,17 +4,11 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
     
-    Dragonfruit Template 
-    
-    http://www.templatemo.com/tm-411-dragonfruit
-    
-    -->
     <title>ETT</title>
     <meta name="description" content="" />
-    <!-- templatemo 411 dragonfruit -->
-    <meta name="author" content="templatemo">
+    <!-- Author -->
+    <meta name="author" content="Anuar">
     <!-- Favicon-->
     <link rel="shortcut icon" href="./favicon.png" />		
     <!-- Font Awesome -->
@@ -876,7 +870,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-3 col-md-offset-6">
                    <!--  <button type="submit" onclick = "sendMail();">Enviar</button> -->
-                    </br><input type="submit" name="submit" value="Submit">
+                    </br><input type="submit" name="submit" value="Enviar">
                 </div>
                 <div class="col-xs-6 col-sm-3">
                     <button type="reset" >Limpiar</button>

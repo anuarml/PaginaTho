@@ -6,7 +6,7 @@
 		$username = $_GET['username'];
 		$pass = $_GET['password'];
 		//$username ='admin';
-		//$pass = 'Pa$$asdasd';
+		//$pass = 'Pa$$w0rd';
 
 		/*$data = 'Pa$$w0rd';
 	    $key = 'tho2016';
