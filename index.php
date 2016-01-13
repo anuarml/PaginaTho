@@ -4,23 +4,17 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
     
-    Dragonfruit Template 
-    
-    http://www.templatemo.com/tm-411-dragonfruit
-    
-    -->
     <title>ETT</title>
     <meta name="description" content="" />
-    <!-- templatemo 411 dragonfruit -->
-    <meta name="author" content="templatemo">
+    <!-- Author -->
+    <meta name="author" content="Anuar">
     <!-- Favicon-->
     <link rel="shortcut icon" href="./favicon.png" />		
     <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/librerias/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/librerias/bootstrap.min.css" rel="stylesheet">
     <!-- Template  -->
     <link href="css/templatemo_style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -62,7 +56,7 @@
 
 <div id="templatemo_mobile_menu">
         <ul class="nav nav-pills nav-stacked">
-            <li><a href=""><div id="google_translate_element"></div></a></li>
+            
             <li><a href="#templatemo_banner_slide"><i class="glyphicon glyphicon-home"></i> &nbsp; Principal</a></li>
             <li><a href="#templatemo_about"><i class="glyphicon glyphicon-user"></i> &nbsp; Acerca De</a></li>
             <li><a href="#templatemo_servicios"><i class="glyphicon glyphicon-lock"></i> &nbsp; Servicios</a></li>
@@ -70,6 +64,7 @@
             <li><a href="#templatemo_alianzas"><i class="glyphicon glyphicon-link"></i> &nbsp; Alianzas</a></li>
             <li><a href="#templatemo_events"><i class="glyphicon glyphicon-calendar"></i> &nbsp; Eventos</a></li>
             <li><a href="#templatemo_contact"><i class="glyphicon glyphicon-envelope"></i> &nbsp; Contacto</a></li>
+            <!--<li><a href="" id="googleTransA"></a></li>-->
             <!--<li><div id="google_translate_element"></div></li>-->
         </ul>
 </div>
@@ -77,7 +72,7 @@
     <div id="templatemo_banner_menu">
         <div class="container-fluid">
             <div class="col-lg-2 col-xs-3 templatemo_logo">
-            	<a href="#">
+            	<a href="login.php">
                 	<img src="images/LogoETTCompleto.png" id="logo_img" alt="dragonfruit website template" title="ETT" />
                     <!--<h1 id="logo_text">ETT</h1>-->
                 	<!--<h1 id="logo_text">Dragon<span>fruit</span></h1>
@@ -100,7 +95,7 @@
                     <!--<li><a href="#templatemo_timeline">Timeline</a></li>
                     <li><a rel="nofollow" href="https://www.facebook.com/Estrategia-Y-Tecnologia-THO-210138125739600/?fref=ts" class="external-link">External</a></li>-->
                     <li class="tab"><a href="#templatemo_contact">Contacto</a></li>
-                    <li><a href=""><div id="google_translate_element"></div></a></li>
+                    <li ><a href=""><div id="google_translate_element"></div></a></li>
                  </ul>
             </div>
             <div class="col-xs-8 visible-xs visible-sm">
@@ -224,7 +219,7 @@
     <div class="container-fluid">
         <h1>Servicios</h1>
         
-        <div class="col-sm-6 col-md-12 about_icon"> 
+        <div class="col-sm-6 col-md-12 col-sm-offset-3 col-md-offset-0 about_icon"> 
             <h4><p>&bull;Revisión y determinación de políticas de operación (suficiencia y eficiencia).<br/>&bull;Análisis y desarrollo de sistemas y procedimientos.<br/>&bull;Análisis de la estructura organizacional.<br/>&bull;Auditoria interna integral, operacional y de sistemas.<br/>&bull;Asesoría e implementación de servidores Microsoft.<br/>&bull;Asesoría, implementación y puesta a punto del sistema integral de información Intélisis Socio Certificado Implementador.<br/>&bull;Implementación y puesta a punto de redes inalámbricas.</p></h4>
         </div>
         <!--<h1>Servicios</h1>
@@ -241,29 +236,29 @@
                 </div>
             </div>
         </div>-->
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>-->
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="http://www.acronis.com/"><img src="images/servicios/acronis-logo.jpg" class="img-responsive" alt="Acronis" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="http://www.eset.com"><img src="images/servicios/eset_logo.png" class="img-responsive" alt="Eset" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="https://technet.microsoft.com/es-mx/library/hh831531.aspx"><img src="images/servicios/Hyperv_logo.png" class="img-responsive" alt="Hyperv" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="http://www.intelisis.com/"><img src="images/servicios/Intelisis-logo.jpg" class="img-responsive" alt="Intelisis" /></a>
@@ -276,28 +271,28 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="https://www.microsoft.com"><img src="images/servicios/microsoft_logo.jpg" class="img-responsive" alt="Microsoft" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="https://www.synology.com"><img src="images/servicios/synology_logo.png" class="img-responsive" alt="Synology" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_left">
                 <div class="servicio_box_img">
                     <a href="http://www.vmware.com/"><img src="images/servicios/vmware_logo.jpg" class="img-responsive" alt="VMWare" /></a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <div class="col-xs-8 col-xs-offset-4 col-sm-10 col-sm-offset-4 col-md-3 col-md-offset-0">
             <div class="servicio_box_wap servicio_animate_right">
                 <div class="servicio_box_img">
                     <a href="http://www.vmware.com/"><img src="images/servicios/watchguard-logo.jpg" class="img-responsive" alt="Watchguard" /></a>
@@ -653,25 +648,25 @@
 <div id="templatemo_alianzas" class="container_wapper"><!--templatetemo_alianzas-->
     <div class="container-fluid">
         <h1>Alianzas</h1>
-        <div class="col-sm-6 col-md-3"></div>
-        <div class="col-sm-6 col-md-9 about_icon"> 
-            <h4><p>&bull;Intelisis.<br/><br/>&bull;TIC Consultores, S. A. de C. V.<br/>Tels. (999) 926.54.18 y (999) 926.83.55<br/>Cel. (999) 970.08.93 <br/>raul.rebolledo@ticc.com.mx<br/><a href="http://www.ticc.com.mx/">www.ticc.com.mx</a></p></h4>
+        <div class="col-xs-4 col-sm-4 col-md-4"></div>
+        <div class="col-xs-8 col-sm-8 col-md-8 about_icon"> 
+            <h4><p>&bull;Intelisis.<br/></h4>
         </div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0 hidden-xs"></div>
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <!--<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-0 hidden-xs"></div>-->
+        <div class="col-xs-8 col-xs-offset-4 col-sm-9 col-sm-offset-4 col-md-3 col-md-offset-4">
             <div class="alianza_box_wap alianza_animate_right">
                 <div class="alianza_box_img">
                     <a href="http://www.intelisis.com/"><img src="images/alianzas/Intelisis-logo.jpg" class="img-responsive" alt="Intelisis" /></a>
                 </div>
             </div>
         </div>       
-        <div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
+        <!--<div class="col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-0">
             <div class="alianza_box_wap alianza_animate_left">
                 <div class="alianza_box_img">
                     <a href="http://www.ticc.com.mx/"><img src="images/alianzas/logo-ticc.png" class="img-responsive" alt="TIC" /></a>
                 </div>
             </div>
-        </div>    
+        </div>-->   
     </div>
 </div><!--templatetemo_alianzas-->
 <div id="templatemo_events" class="container_wapper">
@@ -860,8 +855,8 @@
                     <select id = "tomail" name= "tomail" class="form-control">
                       <option value="anuar.morales@tho.mx">anuar.morales@tho.mx</option>
                       <option value="vanessa.fragoso@tho.mx">vanessa.fragoso@tho.mx</option>
-                      <option value="yussel.paredes@tho.mx">yussel.paredes@tho.mx</option>
-                      <!--<option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
+                      <!--<option value="yussel.paredes@tho.mx">yussel.paredes@tho.mx</option>
+                      <option value="edvin.diaz@tho.mx">edvin.diaz@tho.mx</option>
                       <option value="juralo@tho.mx">juralo@tho.mx</option>-->
                     </select>
                 </div>
@@ -875,7 +870,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-3 col-md-offset-6">
                    <!--  <button type="submit" onclick = "sendMail();">Enviar</button> -->
-                    </br><input type="submit" name="submit" value="Submit">
+                    </br><input type="submit" name="submit" value="Enviar">
                 </div>
                 <div class="col-xs-6 col-sm-3">
                     <button type="reset" >Limpiar</button>
@@ -890,11 +885,11 @@
         <p id="footer">Copyright &copy; 2015 Estrategia y Tecnología Tho</p>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.singlePageNav.min.js"></script>
-<script src="js/unslider.min.js"></script>
+<script src="js/librerias/jquery.min.js"></script>
+<script src="js/librerias/jquery-ui.min.js"></script>
+<script src="js/librerias/bootstrap.min.js"></script>
+<script src="js/librerias/jquery.singlePageNav.min.js"></script>
+<script src="js/librerias/unslider.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 <script src="js/templatemo_script.js"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -902,6 +897,11 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
     }
+
+    /*setTimeout(function(){
+        $('#google_translate_element').clone().appendTo('#googleTransA');
+        console.log($('#google_translate_element').clone());
+    }, 3000);*/
 
     function sendMail () {
         var formData = {

@@ -31,7 +31,7 @@
 	}*/
 	$noSetData = 101;
 	$failedMessageSent = 102;
-	if (!empty($_POST["name"])) {
+	if (!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["phone"]) && !empty($_POST["subject"]) && !empty($_POST["message"])) {
 		$mail = new PHPMailer;
 		//$mail->SMTPDebug = 2;
 		$mail->isSMTP();                                      // Set mailer to use SMTP
