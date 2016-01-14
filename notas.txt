@@ -18,8 +18,9 @@ Hasta el 04/01/2016 28 horas
 
 Hasta el 08/01/2016 44 horas
 
-hasta el 12/01/2016 49.5 horas
+Hasta el 12/01/2016 49.5 horas
 
+Hasta eñ 13/01/2016 50.5 horas (Interrumpido por cambiar a angular JS)
 
 Tiempo en solucionar el envio de correo: 8 horas
 
@@ -123,3 +124,8 @@ http://webdesignpub.com/html-contact-form-captcha/
 
 Encripcion
 http://stackoverflow.com/questions/5089841/two-way-encryption-i-need-to-store-passwords-that-can-be-retrieved
+
+
+Entidades HTML
+http://www.freeformatter.com/html-entities.html
+http://www.dionysia.org/html/entities/symbols.html
